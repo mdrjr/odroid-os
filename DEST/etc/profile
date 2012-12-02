@@ -1,0 +1,5 @@
+echo "ODROID OS: User/Env Setup"
+export TERM=linux
+export TERMINFO=/share/terminfo
+export HOME=/root
+export SHELL=/bin/sh

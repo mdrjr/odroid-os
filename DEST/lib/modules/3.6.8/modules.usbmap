@@ -1,0 +1,2 @@
+# usb module         match_flags idVendor idProduct bcdDevice_lo bcdDevice_hi bDeviceClass bDeviceSubClass bDeviceProtocol bInterfaceClass bInterfaceSubClass bInterfaceProtocol driver_info
+smsc75xx             0x0003      0x0424   0x7500    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00               0x0

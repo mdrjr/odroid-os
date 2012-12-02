@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "ODORID OS: Setting up Loopback"
+ifconfig lo up
+ifconfig lo 127.0.0.1
+hostname odroid-os
+
+echo "ODROID OS: Networking (eth0)"
+modprobe smsc75xx
+sleep 3
+udhcpc -i eth0
+sleep 3
+echo "ODROID OS: Networking SSH Server"
+/sbin/dropbear

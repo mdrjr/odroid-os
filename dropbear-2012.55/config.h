@@ -26,34 +26,34 @@
 /* #undef CONF_WTMP_FILE */
 
 /* Disable use of lastlog() */
-#define DISABLE_LASTLOG 
+/* #undef DISABLE_LASTLOG */
 
 /* Use PAM */
 #define DISABLE_PAM 
 
 /* Disable use of pututline() */
-#define DISABLE_PUTUTLINE 
+/* #undef DISABLE_PUTUTLINE */
 
 /* Disable use of pututxline() */
-#define DISABLE_PUTUTXLINE 
+/* #undef DISABLE_PUTUTXLINE */
 
 /* Using syslog */
-#define DISABLE_SYSLOG 
+/* #undef DISABLE_SYSLOG */
 
 /* Disable use of utmp */
-#define DISABLE_UTMP 
+/* #undef DISABLE_UTMP */
 
 /* Disable use of utmpx */
 #define DISABLE_UTMPX 1
 
 /* Disable use of wtmp */
-#define DISABLE_WTMP 
+/* #undef DISABLE_WTMP */
 
 /* Disable use of wtmpx */
 #define DISABLE_WTMPX 1
 
 /* Use zlib */
-/* #undef DISABLE_ZLIB */
+#define DISABLE_ZLIB 
 
 /* Define to 1 if you have the `basename' function. */
 #define HAVE_BASENAME 1
@@ -146,13 +146,13 @@
 /* #undef HAVE_LIBUTIL_H */
 
 /* Define to 1 if you have the `z' library (-lz). */
-#define HAVE_LIBZ 1
+/* #undef HAVE_LIBZ */
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
 
 /* Have login() function */
-/* #undef HAVE_LOGIN */
+#define HAVE_LOGIN 
 
 /* Define to 1 if you have the `logout' function. */
 #define HAVE_LOGOUT 1
@@ -215,7 +215,7 @@
 #define HAVE_SETUTXENT 1
 
 /* Define to 1 if you have the <shadow.h> header file. */
-/* #undef HAVE_SHADOW_H */
+#define HAVE_SHADOW_H 1
 
 /* Define to 1 if you have the `socket' function. */
 #define HAVE_SOCKET 1
@@ -398,7 +398,7 @@
 /* #undef USE_DEV_PTMX */
 
 /* Number of bits in a file offset, on hosts where this is settable. */
-/* #undef _FILE_OFFSET_BITS */
+#define _FILE_OFFSET_BITS 64
 
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */

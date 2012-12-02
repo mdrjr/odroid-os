@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo "ODROID OS: Mouting RootFile System"
+mount /dev/mmcblk0p1 / -o remount,rw
+
+echo "ODROID OS: Mouting /proc"
+mount -t proc proc /proc
+
+echo "ODROID OS: Mouting /dev"
+mount -t devtmpfs udev /dev
+
+echo "ODROID OS: Mouting /sys"
+mount -t sysfs sysfs /sys
+
+echo "ODROID OS: Networking"
+/etc/init.d/networking & 
+
+
+

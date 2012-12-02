@@ -70,14 +70,14 @@ exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 sbindir=${exec_prefix}/sbin
 
-CC=gcc
-AR=ar
-RANLIB=ranlib
-STRIP=strip
+CC=/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+AR=/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ar
+RANLIB=/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ranlib
+STRIP=/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-strip
 INSTALL=install
 CPPFLAGS=
 CFLAGS+=-I. -I$(srcdir) $(CPPFLAGS) -Os -W -Wall
-LIBS+=-lutil -lz 
+LIBS+=-lutil 
 LDFLAGS=-static
 
 EXEEXT=

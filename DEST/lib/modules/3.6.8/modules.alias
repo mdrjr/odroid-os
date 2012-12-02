@@ -1,0 +1,4 @@
+# Aliases extracted from modules themselves.
+alias nfs-layouttype4-1 nfs_layout_nfsv41_files
+alias usb:v0424p7505d*dc*dsc*dp*ic*isc*ip*in* smsc75xx
+alias usb:v0424p7500d*dc*dsc*dp*ic*isc*ip*in* smsc75xx
