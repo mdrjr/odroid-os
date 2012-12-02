@@ -1,0 +1,310 @@
+nano.o: nano.c proto.h nano.h ../config.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include-fixed/limits.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include-fixed/syslimits.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/limits.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/stdc-predef.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs-soft.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix1_lim.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/local_lim.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/limits.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix2_lim.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/xopen_lim.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stdio_lim.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/param.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/param.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/param.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/types.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/types.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/typesizes.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/time.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include/stddef.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/endian.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/endian.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/byteswap.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/byteswap-16.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/select.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/select.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigset.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/time.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/sysmacros.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/pthreadtypes.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include/stdarg.h \
+ /home/mdrjr/dev/odroid/pl/ncurses-5.9/include/curses.h \
+ /home/mdrjr/dev/odroid/pl/ncurses-5.9/include/ncurses_dll.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/stdio.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/libio.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/_G_config.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/wchar.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sys_errlist.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include/stdbool.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wchar.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/xlocale.h \
+ /home/mdrjr/dev/odroid/pl/ncurses-5.9/include/unctrl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/libintl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/stdlib.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/waitflags.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/waitstatus.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/alloca.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/stat.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stat.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/dirent.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/dirent.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/regex.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/option-groups.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/setjmp.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/setjmp.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/assert.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/signal.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/signum.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/siginfo.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigaction.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigcontext.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/sigcontext.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigstack.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ucontext.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigthread.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/unistd.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix_opt.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/environments.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/confname.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/getopt.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/string.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/fcntl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/fcntl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/uio.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/errno.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/errno.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/errno.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/errno.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno-base.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/ctype.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/locale.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/locale.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/timex.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/langinfo.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/nl_types.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/termios.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/termios.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ttydefaults.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ioctl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctls.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctls.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/ioctls.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/ioctl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/ioctl.h \
+ /home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctl-types.h
+
+proto.h:
+
+nano.h:
+
+../config.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include-fixed/limits.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include-fixed/syslimits.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/limits.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/stdc-predef.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs-soft.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix1_lim.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/local_lim.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/limits.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix2_lim.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/xopen_lim.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stdio_lim.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/param.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/param.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/param.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/types.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/types.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/typesizes.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/time.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include/stddef.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/endian.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/endian.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/byteswap.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/byteswap-16.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/select.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/select.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigset.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/time.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/sysmacros.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/pthreadtypes.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include/stdarg.h:
+
+/home/mdrjr/dev/odroid/pl/ncurses-5.9/include/curses.h:
+
+/home/mdrjr/dev/odroid/pl/ncurses-5.9/include/ncurses_dll.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/stdio.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/libio.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/_G_config.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/wchar.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sys_errlist.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../lib/gcc/arm-none-linux-gnueabi/4.7.2/include/stdbool.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wchar.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/xlocale.h:
+
+/home/mdrjr/dev/odroid/pl/ncurses-5.9/include/unctrl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/libintl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/stdlib.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/waitflags.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/waitstatus.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/alloca.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/stat.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stat.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/dirent.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/dirent.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/regex.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/option-groups.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/setjmp.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/setjmp.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/assert.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/signal.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/signum.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/siginfo.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigaction.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigcontext.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/sigcontext.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigstack.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ucontext.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigthread.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/unistd.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix_opt.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/environments.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/confname.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/getopt.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/string.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/fcntl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/fcntl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/uio.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/errno.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/errno.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/errno.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/errno.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno-base.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/ctype.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/locale.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/locale.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/timex.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/langinfo.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/nl_types.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/termios.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/termios.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ttydefaults.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ioctl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctls.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctls.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/ioctls.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/ioctl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/ioctl.h:
+
+/home/mdrjr/bin/arm-2012.09/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctl-types.h:
