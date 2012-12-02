@@ -1,0 +1,621 @@
+--------------------
+./configure --prefix=/home/mdrjr/dev/odroid/pl/OPT/zlib --static
+Sun Dec  2 17:03:45 BRST 2012
+
+=== ztest28018.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 ztest28018.c
+... using gcc
+
+Building static library libz.a version 1.2.7 with /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc.
+
+
+=== ztest28018.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28018.c
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+
+=== ztest28018.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28018 ztest28018.c
+Checking for strerror... Yes.
+
+=== ztest28018.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28018.c
+Checking for unistd.h... Yes.
+
+=== ztest28018.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28018.c
+Checking for stdarg.h... Yes.
+
+=== ztest28018.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28018.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest28018.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28018 ztest28018.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest28018.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28018.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest28018.c ===
+#define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
+int ZLIB_INTERNAL foo;
+int main()
+{
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28018.c
+Checking for attribute(visibility) support... Yes.
+
+=== ztest28018.c ===
+#include <stdio.h>
+#define is32(n,t) for(n=1,k=0;n;n<<=1,k++);if(k==32){puts(t);return 0;}
+int main() {
+    int k;
+    unsigned i;
+    unsigned long l;
+    unsigned short s;
+    is32(i, "unsigned")
+    is32(l, "unsigned long")
+    is32(s, "unsigned short")
+    return 1;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN ztest28018.c -o ztest28018
+Looking for a four-byte integer type... Not found.
+
+ALL = static all64
+AR = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ar
+ARFLAGS = rc
+CC = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+CFLAGS = -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+CPP = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS = -static
+LDSHARED = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ranlib
+SFLAGS = -O3 -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic test64
+VER = 1.2.7
+Z_U4 =
+exec_prefix = ${prefix}
+includedir = ${prefix}/include
+libdir = ${exec_prefix}/lib
+mandir = ${prefix}/share/man
+prefix = /home/mdrjr/dev/odroid/pl/OPT/zlib
+sharedlibdir = ${libdir}
+uname = Linux
+--------------------
+
+
+--------------------
+./configure --prefix=/home/mdrjr/dev/odroid/pl/OPT/zlib --static
+Sun Dec  2 17:05:16 BRST 2012
+
+=== ztest28132.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 ztest28132.c
+... using gcc
+
+Building static library libz.a version 1.2.7 with /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc.
+
+
+=== ztest28132.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28132.c
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+
+=== ztest28132.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28132 ztest28132.c
+Checking for strerror... Yes.
+
+=== ztest28132.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28132.c
+Checking for unistd.h... Yes.
+
+=== ztest28132.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28132.c
+Checking for stdarg.h... Yes.
+
+=== ztest28132.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28132.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest28132.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28132 ztest28132.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest28132.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28132.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest28132.c ===
+#define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
+int ZLIB_INTERNAL foo;
+int main()
+{
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28132.c
+Checking for attribute(visibility) support... Yes.
+
+=== ztest28132.c ===
+#include <stdio.h>
+#define is32(n,t) for(n=1,k=0;n;n<<=1,k++);if(k==32){puts(t);return 0;}
+int main() {
+    int k;
+    unsigned i;
+    unsigned long l;
+    unsigned short s;
+    is32(i, "unsigned")
+    is32(l, "unsigned long")
+    is32(s, "unsigned short")
+    return 1;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN ztest28132.c -o ztest28132
+Looking for a four-byte integer type... Not found.
+
+ALL = static all64
+AR = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ar
+ARFLAGS = rc
+CC = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+CFLAGS = -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+CPP = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS = -static
+LDSHARED = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ranlib
+SFLAGS = -O3 -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic test64
+VER = 1.2.7
+Z_U4 =
+exec_prefix = ${prefix}
+includedir = ${prefix}/include
+libdir = ${exec_prefix}/lib
+mandir = ${prefix}/share/man
+prefix = /home/mdrjr/dev/odroid/pl/OPT/zlib
+sharedlibdir = ${libdir}
+uname = Linux
+--------------------
+
+
+--------------------
+./configure --prefix=/home/mdrjr/dev/odroid/pl/OPT/zlib --static
+Sun Dec  2 17:06:31 BRST 2012
+
+=== ztest28247.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 ztest28247.c
+... using gcc
+
+Building static library libz.a version 1.2.7 with /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc.
+
+
+=== ztest28247.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28247.c
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+
+=== ztest28247.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28247 ztest28247.c
+Checking for strerror... Yes.
+
+=== ztest28247.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28247.c
+Checking for unistd.h... Yes.
+
+=== ztest28247.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28247.c
+Checking for stdarg.h... Yes.
+
+=== ztest28247.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28247.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest28247.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28247 ztest28247.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest28247.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28247.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest28247.c ===
+#define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
+int ZLIB_INTERNAL foo;
+int main()
+{
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28247.c
+Checking for attribute(visibility) support... Yes.
+
+=== ztest28247.c ===
+#include <stdio.h>
+int main() {
+    int k;
+    unsigned i;
+    unsigned long l;
+    unsigned short s;
+    return 1;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN ztest28247.c -o ztest28247
+Looking for a four-byte integer type... Not found.
+
+ALL = static all64
+AR = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ar
+ARFLAGS = rc
+CC = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+CFLAGS = -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+CPP = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS = -static
+LDSHARED = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ranlib
+SFLAGS = -O3 -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic test64
+VER = 1.2.7
+Z_U4 =
+exec_prefix = ${prefix}
+includedir = ${prefix}/include
+libdir = ${exec_prefix}/lib
+mandir = ${prefix}/share/man
+prefix = /home/mdrjr/dev/odroid/pl/OPT/zlib
+sharedlibdir = ${libdir}
+uname = Linux
+--------------------
+
+
+--------------------
+./configure --prefix=/home/mdrjr/dev/odroid/pl/OPT/zlib --static
+Sun Dec  2 17:08:14 BRST 2012
+
+=== ztest28356.c ===
+extern int getchar();
+int hello() {return getchar();}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 ztest28356.c
+... using gcc
+
+Building static library libz.a version 1.2.7 with /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc.
+
+
+=== ztest28356.c ===
+#include <sys/types.h>
+off64_t dummy = 0;
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28356.c
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+
+=== ztest28356.c ===
+#include <string.h>
+#include <errno.h>
+int main() { return strlen(strerror(errno)); }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28356 ztest28356.c
+Checking for strerror... Yes.
+
+=== ztest28356.c ===
+#include <unistd.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28356.c
+Checking for unistd.h... Yes.
+
+=== ztest28356.c ===
+#include <stdarg.h>
+int main() { return 0; }
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28356.c
+Checking for stdarg.h... Yes.
+
+=== ztest28356.c ===
+#include <stdio.h>
+#include <stdarg.h>
+#include "zconf.h"
+int main()
+{
+#ifndef STDC
+  choke me
+#endif
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28356.c
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+
+=== ztest28356.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -O3 -D_LARGEFILE64_SOURCE=1 -o ztest28356 ztest28356.c
+Checking for vsnprintf() in stdio.h... Yes.
+
+=== ztest28356.c ===
+#include <stdio.h>
+#include <stdarg.h>
+int mytest(const char *fmt, ...)
+{
+  int n;
+  char buf[20];
+  va_list ap;
+  va_start(ap, fmt);
+  n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+  return n;
+}
+int main()
+{
+  return (mytest("Hello%d\n", 1));
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28356.c
+Checking for return value of vsnprintf()... Yes.
+
+=== ztest28356.c ===
+#define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
+int ZLIB_INTERNAL foo;
+int main()
+{
+  return 0;
+}
+===
+/home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -c -O3 -D_LARGEFILE64_SOURCE=1 ztest28356.c
+Checking for attribute(visibility) support... Yes.
+
+Looking for a four-byte integer type... Found.
+
+ALL = static all64
+AR = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ar
+ARFLAGS = rc
+CC = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+CFLAGS = -O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+CPP = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc -E
+EXE =
+LDCONFIG = ldconfig
+LDFLAGS = -static
+LDSHARED = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-gcc
+LDSHAREDLIBC = -lc
+OBJC = $(OBJZ) $(OBJG)
+PIC_OBJC = $(PIC_OBJZ) $(PIC_OBJG)
+RANLIB = /home/mdrjr/bin/arm-2012.09/bin/arm-none-linux-gnueabi-ranlib
+SFLAGS = -O3 -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
+SHAREDLIB =
+SHAREDLIBM =
+SHAREDLIBV =
+STATICLIB = libz.a
+TEST = all teststatic test64
+VER = 1.2.7
+Z_U4 =
+exec_prefix = ${prefix}
+includedir = ${prefix}/include
+libdir = ${exec_prefix}/lib
+mandir = ${prefix}/share/man
+prefix = /home/mdrjr/dev/odroid/pl/OPT/zlib
+sharedlibdir = ${libdir}
+uname = Linux
+--------------------
+
+
